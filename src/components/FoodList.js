@@ -43,7 +43,7 @@ const FoodList = () => {
 				)}
 				{pathname === "/basket" && (
 					<>
-						<div className="max-[700px]:w-full max-[700px]:py-1 font-bold  rounded-2xl bg-slate-600 mx-10 flex  items-center text-lg px-6 text-white ">
+						<div className="max-[700px]:w-full max-[700px]:py-1 font-bold justify-center rounded-2xl bg-slate-600 mx-10 flex  items-center text-lg px-6 text-white ">
 							Total Amount: ${totalAmount.toFixed(2)}
 						</div>
 						<motion.button

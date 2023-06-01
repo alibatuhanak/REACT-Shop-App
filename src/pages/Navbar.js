@@ -5,7 +5,7 @@ import { BiMoneyWithdraw } from "react-icons/bi";
 import { motion } from "framer-motion";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { search } from "../features/marketSlice";
+import { search, changeCategory } from "../features/marketSlice";
 
 const Navbar = () => {
 	const [query, setQuery] = useState("");
@@ -50,6 +50,7 @@ const Navbar = () => {
 						id="search"
 						name="text"
 						placeholder="Search..."
+						onFocus={() => dispatch(changeCategory("All"))}
 						value={query}
 						onChange={e => {
 							setQuery(e.target.value);
